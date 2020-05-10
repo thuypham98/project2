@@ -1,0 +1,40 @@
+#sanpham
+{
+	
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	float: left;
+}
+#chitiet p a{
+	text-decoration: none;
+}
+#chitiet span a{
+	text-decoration: none;
+}
+/*h2{
+	margin-left: -150px;
+}*/
+#sanpham img{
+float: left;
+    margin-bottom: -10px;
+}
+#chitiet{
+	/*float: left;*/
+	margin-left: 2px;
+	padding: 60px 0px 0px 0px;
+}
+#tivi{
+width: 850px;
+margin-left: 170px;
+margin-top: 120px;
+}
+#tivi img{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*.slide{
+	width: 1000px;
+	height: 
+}*/

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Đăng nhập</title>
+</head>
+<body>
+	<div align="center">
+		<img src="Image/admin.png" alt="" style=" height:200px">
+		<h2>Đăng nhập vào tài khoản của bạn</h2>
+		<form autocomplete="on" action="Trangchu.html">
+			<table>
+				<tr>
+					<td>Tên đăng nhập:</td>
+				</tr>
+				<tr>
+					<td><input type="text" placeholder="Mời bạn nhập Email" id="tentk" name="" autofocus  required autocomplete="off" size="70" style="line-height: 30px;"></td>
+				</tr>
+				<tr>
+					<td>Mật khẩu:</td>
+				</tr>
+				<tr>
+					<td><input type="password" placeholder="Mời bạn nhập Mật khẩu" id="matkhau" name="" required size="70" style="line-height: 30px;"></td>
+				</tr>
+			</table>
+
+			<label><input type="checkbox" name="remember" checked="true">Ghi nhớ</label>&nbsp;&nbsp;&nbsp;
+			<a href="#" style="text-decoration: none;">Quên mật khẩu</a><br>
+			<!-- <button style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;"><a href="qlsanpham.html">Đăng nhập</button> -->
+				<input type="submit" name="" value="Đăng nhập" href="Trangchu.html" onclick="return KTTK()" style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;">
+			</form>
+		</div>
+		<script type="text/javascript">
+			function KTTK()
+			{
+				var Email=document.getElementById('tentk').value;
+				var Pass=document.getElementById('matkhau').value;
+
+				if(Email =='0ff98' && Pass =='Thuyhy211'){
+					return true;
+				}
+				else {
+					alert('Tài khoản hoặc Mật khẩu chưa chính xác!');
+				}
+				return false;
+			}
+
+		</script>
+	</body>
+	</html>

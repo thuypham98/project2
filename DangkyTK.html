@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Smart Tivi</title>
+	<link rel="stylesheet" type="text/css" href="css/Trangchu.css">
+	<link rel="stylesheet" type="text/css" href="css\Sanpham.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style>
+	#menu > ul > li{
+		padding: 0px 42.6px;
+			}
+		 /*.affix {
+      top: 0;
+      width: 100%; chỉnh độ rộng của thanh menu khi kéo trang xuống
+      z-index: 9999 !important;
+	}*/
+
+</style>
+<script type="text/javascript">
+	//Kiểm tra Tên nhập đúng ko???
+	function kiemtraten(){
+		var ten = document.getElementById("txtTen").value;
+		// if(ten==""){
+		// 	document.getElementById("ktra1").innerHTML = "Vui lòng nhập Họ tên  ";
+		// }
+
+		for(i=0;i<ten.length;i++){
+			if(!isNaN(ten[i])){
+				document.getElementById("ktra1").innerHTML ="Không được nhập ký tự số";
+			}
+			else
+				document.getElementById("ktra1").innerHTML ="";
+		}
+
+	}
+</script>
+</head>
+<body style="width: 1000px;margin: auto;">
+	<div id="banner">
+		<img src="Image\logowap3.png">
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="Trangchu.html" title="Trang chủ"><span class="glyphicon glyphicon-home" ></span>&nbsp;&nbsp;Trang chủ</a></li>
+			<li><a href="Gioithieu.html" title="Giới thiệu"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Giới Thiệu</a></li>
+			<li><a href="#" title="Sản phẩm"><span class="glyphicon glyphicon-blackboard"></span>&nbsp;Sản Phẩm</a>
+				<ul>
+					<li><a href="Sony.html">Sony</a></li>
+					<li><a href="Samsung.html">Samsung</a></li>
+					<li><a href="Panasonic.html">Panasonic</a></li>
+					<li><a href="Toshiba.html">Toshiba</a></li>
+					<li><a href="LG.html">LG</a></li>
+				</ul>
+			</li>
+			<li><a href="Lienhe.html" title="Liên hệ"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;Liên Hệ</a></li>
+			<li><a href="Giohang.html" title="Giỏ hàng"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Giỏ Hàng</a></li>
+			<li style="border-right: none;"><a href="#" title="Tài Khoản" ><span class="glyphicon glyphicon-user"></span>&nbsp;Tài Khoản</a>
+				<ul>
+					<li><a href="DangnhapTK.html">Đăng Nhập</a></li>
+					<li><a href="DangkyTK.html">Đăng Ký</a></li>
+					<li><a href="Dangnhap.html">Admin</a></li>
+				</ul>
+			</li>
+			<!-- <li><input type="serch" name="" placeholder="Search...." style="width: 200px; margin-bottom: 10px;"></li> -->
+		</ul>
+	</div>
+	<div id="main">
+<center><h1><b>ĐĂNG KÝ TÀI KHOẢN MỚI</b></h1></center>
+<form action="Trangchu.html" style=" width: 700px;margin: auto;line-height: 30px;">
+<table border="0" cellpadding="0" cellspacing="0">
+	<tr>
+	<td><p>Avatar:</p></td>
+	<td><input type="file" name="avarta"></td>
+</tr>
+<tr>
+    <td><p>Giới Tính:</p></td>
+    <td><p><input type="radio" checked name="gioitinh"> nam <input type="radio" name="gioitinh"> nữ</p></td>
+</tr>
+<tr>
+    <td><p>Địa Chỉ:</p></td>
+    <td>
+           <p>
+        <select name="diachi">
+          <option value="1">Hưng Yên</option>
+          <option value="2">Hà Nội</option>
+          <option value="3">Hải Phòng</option>
+          <option value="4">Quảng Ninh</option>
+          <option value="5">TP.Hồ Chí Minh</option>
+          <option value="6">Sơn La</option>
+        </select>
+        </p>
+    </td>
+</tr>
+<tr>
+	<td><p>Ngày sinh</p></td>
+	<td>
+		<select name="day" id="">
+			<option value="1">Ngày 1</option>
+			<option value="2">Ngày 2</option>
+			<option value="3">Ngày 3</option>
+			<option value="4">Ngày 4</option>
+			<option value="5">Ngày 5</option>
+			<option value="6">Ngày 6</option>
+			<option value="7">Ngày 7</option>
+			<option value="8">Ngày 8</option>
+			<option value="9">Ngày 9</option>
+			<option value="10">Ngày 10</option>
+			<option value="11">Ngày 11</option>
+			<option value="12">Ngày 12</option>
+			<option value="12">...</option>
+		</select>
+		<select name="month" id="">
+			<option value="1">Tháng 1</option>
+			<option value="2">Tháng 2</option>
+			<option value="3">Tháng 3</option>
+			<option value="4">Tháng 4</option>
+			<option value="5">Tháng 5</option>
+			<option value="6">Tháng 6</option>
+			<option value="7">Tháng 7</option>
+			<option value="8">Tháng 8</option>
+			<option value="9">Tháng 9</option>
+			<option value="10">Tháng 10</option>
+			<option value="11">Tháng 11</option>
+			<option value="12">Tháng 12</option>
+		</select>
+		<select name="year" id="">
+			<option value="1">Năm 2003</option>
+			<option value="2">Năm 2002</option>
+			<option value="3">Năm 2001</option>
+			<option value="4">Năm 2000</option>
+			<option value="5">Năm 1999</option>
+			<option value="6">Năm 1998</option>
+			<option value="7">Năm 1997</option>
+			<option value="8">Năm 1996</option>
+			<option value="9">Năm 1995</option>
+			<option value="10">...</option>
+		</select>
+	</td>
+</tr>
+	<tr>
+    <td><p>Họ Tên:</p></td>
+    <td><p><input type="text" id="txtTen" placeholder="Mời bạn nhập Họ tên" name="" size="70" required onblur="kiemtraten()"><br>
+									<span id="ktra1" style="color: red"></span></p></td>
+</tr>
+<tr>
+    <td><p>Tên Đăng Nhập:</p></td>
+    <td><p><input type="text" placeholder="Mời bạn nhập Tên đăng nhập" size="70" required="" ></p></td>
+</tr>
+<tr>
+    <td><p>Mật Khẩu</p></td>
+    <td><p><input type="password" placeholder="Mời bạn nhập Mật khẩu" required="" size="70" name="matkhau"></p></td>
+</tr>
+<tr>
+    <td><p>Nhập Lại Mật Khẩu:</p></td>
+    <td><p><input type="password" placeholder="Mời bạn nhập lại Mật khẩu" required="" size="70" name="lapmatkhau"></p></td>
+</tr>
+<tr>
+    <td><p>Email:</p></td>
+    <td><p><input type="email" placeholder="Mời bạn nhập Email" required="" size="70" name="email"></p></td>
+</tr>
+<tr>
+    <td><p>Trích Dẫn Ngắn:</p></td>
+    <td><textarea cols="72" rows="5" placeholder="Trích dẫn ngắn về bản thân"></textarea></td>
+</tr>
+<tr>
+<td colspan="2">
+  <center><input type="submit" name="" value="Đăng Ký" href="Trangchu.html"> <input type="reset" value="Nhập lại"></center>
+</td>
+</tr>
+</table>
+</form>
+		<hr style="width: 1000px;color: red">
+		<div id="footer">
+			<p style="border: 1px solid #ccc">
+				<b>&nbsp;&nbsp;Đối tác kinh doanh:<img src="Image/doitac.png" alt="" width="855"></b>
+			</p>
+			<!-- <img src="Image\chungnhan.png" alt=""  style="float: left; margin: -10px 100px 0px 0px ;width: 230px; height:110px"> -->
+			<div style="line-height: 27px;">
+				<b>CỬA HÀNG</b><br>
+				Thế Giới Smart Tivi<br>
+				Hotline: (+84) 1686999696<br>
+				Email:<a href="mailto:Phamthuy210198@gmail.com"> Phamthuy210198@gmail.com</a><br>
+				Địa chỉ: Yên Khê-Việt Hòa-Khoái Châu-Hưng Yên<br>
+
+				<img src="Image/dangkibct.png" alt="" height="45">
+			</div>
+			<div style="width: 295px;">
+				<b>HÌNH THỨC THANH TOÁN</b><br>
+				<img src="Image/hinhthucthanhtoan.png" alt="" style="margin-top: 10px; height:145px;">	
+			</div>
+			<div>
+				<b>BẢN ĐỒ</b><br>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21402.743202324385!2d105.99662871123161!3d20.821088185573615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135bbd5a3c3f101%3A0x9b9e2940abde8f6e!2zVGjDtG4gWcOqbiBLaMOq!5e0!3m2!1svi!2s!4v1527192987470" width="345" height="160" frameborder="0" style="border:0; margin-top: 5px;" allowfullscreen></iframe>
+				<!-- <img src="Image\diachi.png" alt="" style="margin: -10px -77px 0px 20px ;width: 230px; height:110px" > -->
+			</div>
+		</div>
+		<div style="background: #D0FEFF; text-align: center;height: 35px;line-height: 35px; margin-bottom: 10px">
+			Copyright © by Phạm Thủy TK 14.1
+		</div>
+	</body>
+	</html>

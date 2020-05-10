@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Smart Tivi</title>
+	<link rel="stylesheet" type="text/css" href="css\Trangchu.css">
+	<link rel="stylesheet" type="text/css" href="css\Sanpham.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	#giohang table tr td input{
+		height: 30px;
+	}
+	#giohang button a{
+		text-decoration: none;
+		color: #2100DF;
+	}
+	#menu > ul > li{
+	padding: 0px 42.6px;
+	
+	}
+	th{
+		text-align: center;
+	}
+</style>
+<script>
+	//Kiểm tra Tên nhập đúng ko???
+	function kiemtraten(){
+		var ten = document.getElementById("txtTen").value;
+		// if(ten==""){
+		// 	document.getElementById("ktra1").innerHTML = "Vui lòng nhập Họ tên  ";
+		// }
+
+		for(i=0;i<ten.length;i++){
+			if(!isNaN(ten[i])){
+				document.getElementById("ktra1").innerHTML ="Không được nhập ký tự số";
+			}
+			else
+				document.getElementById("ktra1").innerHTML ="";
+		}
+
+	}
+	//Kiểm tra Số điện thoại nhập đúng ko???	
+	function kiemtraSDT(){
+		var sdt = document.getElementById("txtSDT").value;
+		if(sdt==""){
+			document.getElementById("ktra2").innerHTML = "Vui lòng nhập Số điện thoại";
+		}
+		else{
+			if(!isNaN(sdt)){
+				document.getElementById("ktra2").innerHTML ="";}
+				else
+				{
+					document.getElementById("ktra2").innerHTML ="Vui lòng nhập đúng ký tự số";
+				}
+			}
+			
+			if(sdt.length < 10 || sdt.length > 11){
+				document.getElementById("ktra2").innerHTML ="Số điện thoại chưa đúng!";
+			}
+			
+		}
+		function thichsp(){
+			alert("Đã thêm vào danh sách yêu thích!");
+		}
+	</script>
+</head>
+<body style="width: 1000px;margin: auto;">
+	<div id="banner">
+		<img src="Image\logowap3.png">
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="Trangchu.html" title="Trang chủ"><span class="glyphicon glyphicon-home" ></span>&nbsp;&nbsp;Trang chủ</a></li>
+			<li><a href="Gioithieu.html" title="Giới thiệu"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Giới Thiệu</a></li>
+			<li><a href="#" title="Sản phẩm"><span class="glyphicon glyphicon-blackboard"></span>&nbsp;Sản Phẩm</a>
+				<ul>
+					<li><a href="Sony.html">Sony</a></li>
+					<li><a href="Samsung.html">Samsung</a></li>
+					<li><a href="Panasonic.html">Panasonic</a></li>
+					<li><a href="Toshiba.html">Toshiba</a></li>
+					<li><a href="LG.html">LG</a></li>
+				</ul>
+			</li>
+			<li><a href="Lienhe.html" title="Liên hệ"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;Liên Hệ</a></li>
+			<li><a href="Giohang.html" title="Giỏ hàng"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Giỏ Hàng</a></li>
+			<li style="border-right: none;"><a href="#" title="Tài Khoản" ><span class="glyphicon glyphicon-user"></span>&nbsp;Tài Khoản</a>
+				<ul>
+					<li><a href="DangnhapTK.html">Đăng Nhập</a></li>
+					<li><a href="DangkyTK.html">Đăng Ký</a></li>
+					<li><a href="Dangnhap.html">Admin</a></li>
+				</ul>
+			</li>
+			<!-- <li><input type="serch" name="" placeholder="Search...." style="width: 200px; margin-bottom: 10px;"></li> -->
+		</ul>
+	</div>
+	<div id="cr">
+		<marquee behavior="alternate"> Chào mừng bạn đã đến với Cris TiVi - Thế giới Smart TiVi trong tầm tay !!!</marquee>
+		
+	</div>
+	<li id="search"><input type="search" name="" placeholder="Mời bạn nhập từ khóa tìm kiếm....";"></li>
+	<img src="Image/tim.png" style="height: 26px; margin: 3px 0px 2px 6px;">
+	<div id="banner1" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#banner1" data-slide-to="0" class=""></li>
+			<li data-target="#banner1" data-slide-to="1" class=""></li>
+			<li data-target="#banner1" data-slide-to="2" class=""></li>
+			<li data-target="#banner1" data-slide-to="3" class="active"></li>
+			<li data-target="#banner1" data-slide-to="4" class=""></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item">
+				<a href="Samsung.html"><img src="Image/banner.jpg"></a>
+			</div>
+			<div class="item">
+				<a href="Sony.html"><img src="Image/banner1.jpg"></a>
+			</div>
+			<div class="item">
+				<a href="LG.html"><img src="Image/banner4.jpg"></a>
+			</div>
+			<div class="item active">
+				<img src="Image/banner3.jpg">
+			</div>
+			<div class="item ">
+				<img src="Image/banner2.jpg">
+			</div>
+		</div>
+		<a class="left carousel-control" href="#banner1" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<a class="right carousel-control" href="#banner1" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	</div>
+	<div id="main">
+		<div id="left"  style="margin-top: -12px;">
+			<div class="menu_left">
+				<h4><span class="glyphicon glyphicon-list"></span><b>&nbsp;&nbsp;Các Tùy Chọn</b></h4>
+				<ul>
+					<li><a><span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;Kích cỡ màn hình:</a>
+						<ul  style="text-align: center; margin-top: 2px;">
+							<li><a href="32_43.html">32-43''</a></li>
+							<li><a href="44_55.html">44-55''</a></li>
+							<li><a href="55.html">>55''</a></li>
+						</ul>
+					</li>
+					<li><a><span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;Độ phân giải:</a>
+						<ul  style="text-align: center; margin-top: 2px;">
+							<li><a href="720p.html">HD 720P</a></li>
+							<li><a href="1080p.html">Full HD 1080P</a></li>
+							<li><a href="4k.html">Ultra HD 4K</a></li>
+						</ul></li>
+						<li><a><span class="glyphicon glyphicon-hand-right"></span>&nbsp;&nbsp;Giá bán:</a>
+							<ul  style="text-align: center; margin-top: 2px;">
+								<li><a href="7t.html">Dưới 7 triệu</a></li>
+								<li><a href="7_10t.html">7-10 triệu</a></li>
+								<li><a href="10t.html">Trên 10 triệu</a></li>
+							</ul></li>
+					<!-- <li><a>Màn hình:</a>
+					<ul  style="text-align: center; margin-top: 2px;">
+							<li><a href="">Cong</a></li>
+							<li><a href="">Phẳng</a></li>
+						</ul></li> -->
+						<img src="Image/QC0.gif" style="width: 150px; height: 400px; margin-top: 15px;">
+					</ul>
+				</div>
+			</div>
+			<div id="giohang" align="center">
+				<form action="Trangchu.html"  autocomplete="on">
+					<h2 align="left"><b>&nbsp;&nbsp;Giỏ Hàng:</b></h2>
+					<table border="1" cellspacing="1" cellpadding="5"  width="835px" >
+						<!-- <img src="Image/giohang.jpg" style="width: 650px; height: 300px;font-weight: 300px;"> -->
+						<tr>
+							<th>Thông tin đơn hàng</th>
+							<th>Số lượng</th>
+							<th>Giá tiền</th>
+							<th>Phí vận chuyển</th>
+							<th>Tổng tiền</th>
+						</tr>
+						<tr align="center">
+							<td>
+								<img src="Image\1.jpg" style="height:120px; width:155px;float: left;margin: 10px;">
+								<p><a href="1.html" style="text-decoration: none;">SMART TIVI SONY 43 INCH KDL-43W660F</a><br>
+									Màn hình Full HD 43''<br>
+									Kết nối mạng Wi-Fi, LAN<br>
+									Công nghệ xử lý hình ảnh HDR<br>
+									Âm thanh ClearAudio chất lượng <br>
+									Giao diện Smart TV mới<br><br>
+									<a href="#"><img  src="Image\Xoa.png" alt="" height="20px" ></a>&nbsp;&nbsp;&nbsp;
+									<a href="#"><img src="Image\Thich.png" onclick="thichsp()" alt="" height="20px" >
+									</p>
+								</td>
+								<td><input type="number" name="" value="1" min="1" style= "height: 15px; width: 35px;"></td>
+								<td>11.500.000đ</td>
+								<td rowspan="2">30.000đ</td>
+								<td rowspan="2">41.520.000 VNĐ</td>
+							</tr>
+							<tr align="center">
+								<td>
+									<img src="Image\27.jpg" style="height:120px; width:155px;float: left;margin: 10px;">
+									<p><a href="27.html" style="text-decoration: none;">SMART TIVI 4K 58INCH PANASONIC TH-58EX750V</a><br>
+										Màn hình LED 58'' 4K<br>
+										Công suất loa 20W<br>
+										Âm thanh vòm VR-Audio<br>
+										Kết nối: Wifi/Bluetooth/HDMI<br><br>
+										<a href="#"><img src="Image\Xoa.png" alt="" height="20px" ></a>&nbsp;&nbsp;&nbsp;
+										<a href="#"><img src="Image\Thich.png" onclick="thichsp()" alt="" height="20px" ></a>
+									</p>
+								</td>
+								<td><input type="number" name="" value="1" min="1" style= "height: 15px; width: 35px;"></td>
+								<td>29.990.000đ</td>
+							</tr>
+						</table>
+						<hr style="margin: 30px 20px 20px 10px;">
+						<table style="margin-left: 10px; margin-bottom: 30px; line-height: 2">
+
+							<tr style="font-size: 18px;">
+								<td><b>Nhập thông tin cá nhân</b></td>
+								<td><b style="margin-left: 60px; ">Chọn hình thức thanh toán</b></td>
+							</tr>
+							<tr>
+								<td>
+									Giới tính:&nbsp;&nbsp;
+									<input type="radio" name="GT" checked="true">Nam&nbsp;&nbsp;
+									<input type="radio" name="GT" >Nữ
+								</td>
+								<td>
+									<input type="radio" name="thanhtoan" checked="true" style="width: 20px;height: 20px; margin-left: 80px;">Thanh toán khi nhận hàng
+								</td>
+							</tr>
+							<tr>
+								<td>Họ tên:</td>
+							</tr>
+							<tr>
+								<td><input type="text" id="txtTen" placeholder="Mời bạn nhập Họ tên" name="" size="70" required onblur="kiemtraten()"><br>
+									<span id="ktra1" style="color: red"></span></td>
+									<td>
+										<input type="radio" name="thanhtoan"  style="width: 20px;height: 20px; margin-left: 80px;">Thẻ tín dụng/Thẻ ghi nợ
+									</td>
+								</tr>
+
+								<tr>
+									<td>Số điện thoại:</td>
+								</tr>
+								<tr>
+									<!-- <td><input type="number" id="txtSdt" placeholder="Mời bạn nhập Số điện thoại"  min="0" style= "height: 30px; width: 477px;"></td> -->
+									<td><input type="text" id="txtSDT" placeholder="Mời bạn nhập Số điện thoại" name="" size="70" onblur="kiemtraSDT()"><br>
+										<span id="ktra2" style="color: red"></span></td>
+										<td>
+											<input type="radio" name="thanhtoan"  style="width: 20px;height: 20px; margin-left: 80px;">Thẻ ATM nội địa
+
+
+										</td>
+									</tr>
+									<tr>
+										<td>Email:</td>
+									</tr>
+									<tr>
+										<td><input type="email" placeholder="Mời bạn nhập Email" required name="" autocomplete="off" size="70"></td>
+										<td>
+											<input type="radio" name="thanhtoan"   style="width: 20px;height: 20px; margin-left: 80px;">Thanh toán qua Master Card
+										</td>
+									</tr>
+
+									<tr>
+										<td>Địa chỉ nhận hàng:</td>
+									</tr>
+									<tr>
+										<td><input type="text" placeholder="Mời bạn nhập Địa chỉ" name="" required size="70"></td>
+										<td>
+											<input type="radio" name="thanhtoan"  style="width: 20px;height: 20px; margin-left: 80px;">Thanh toán qua QR Code
+										</td>
+									</tr>
+									<tr>
+										<td>Nhập mã giảm giá (nếu có):</td>
+									</tr>
+									<tr>
+										<td><input type="text" placeholder="Mời bạn nhập Mã giảm giá" name="" size="58">&nbsp;&nbsp;<input type="button" name="" value="Áp dụng"></td>
+										<td>
+											<input type="radio" name="thanhtoan"  style="width: 20px;height: 20px; margin-left: 80px;">Trả góp
+										</td>
+									</tr>
+								</table>
+								<!-- <button style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;"><a href="#">Tiến Hành Thanh Toán</button>&nbsp;&nbsp; -->
+									<input type="submit" name="" value="Tiến Hành Thanh Toán" href="Trangchu.html" style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;">
+									<button style="width: 180px;height: 40px; background-color: #F97407; margin-top: 10px;"><a href="Trangchu.html">Quay Lại Mua Hàng</a></button>
+								</form>
+								<hr style="width: 1000px;color: red; margin-top: 30px;">
+								<div id="footer">
+			<p style="border: 1px solid #ccc">
+				<b>&nbsp;&nbsp;Đối tác kinh doanh:<img src="Image/doitac.png" alt="" width="855"></b>
+			</p>
+			<!-- <img src="Image\chungnhan.png" alt=""  style="float: left; margin: -10px 100px 0px 0px ;width: 230px; height:110px"> -->
+			<div style="line-height: 27px;">
+				<b>CỬA HÀNG</b><br>
+				Thế Giới Smart Tivi<br>
+				Hotline: (+84) 1686999696<br>
+				Email:<a href="mailto:Phamthuy210198@gmail.com"> Phamthuy210198@gmail.com</a><br>
+				Địa chỉ: Yên Khê-Việt Hòa-Khoái Châu-Hưng Yên<br>
+
+				<img src="Image/dangkibct.png" alt="" height="45">
+			</div>
+			<div style="width: 295px;">
+				<b>HÌNH THỨC THANH TOÁN</b><br>
+				<img src="Image/hinhthucthanhtoan.png" alt="" style="margin-top: 10px; height:145px;">	
+			</div>
+			<div>
+				<b>BẢN ĐỒ</b><br>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21402.743202324385!2d105.99662871123161!3d20.821088185573615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135bbd5a3c3f101%3A0x9b9e2940abde8f6e!2zVGjDtG4gWcOqbiBLaMOq!5e0!3m2!1svi!2s!4v1527192987470" width="345" height="160" frameborder="0" style="border:0; margin-top: 5px;" allowfullscreen></iframe>
+				<!-- <img src="Image\diachi.png" alt="" style="margin: -10px -77px 0px 20px ;width: 230px; height:110px" > -->
+			</div>
+		</div>
+		<div style="background: #D0FEFF; text-align: center;height: 35px;line-height: 35px; margin-bottom: 10px">
+			Copyright © by Phạm Thủy TK 14.1
+		</div>
+
+							</body>
+							</html>

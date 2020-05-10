@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Smart Tivi</title>
+	<link rel="stylesheet" type="text/css" href="css\admin.css">
+	<script src="js\thaotacadmin.js"></script>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var stt = $("#stt").val();
+            var ma = $("#masp").val();
+            var tensp = $("#tensp").val();
+            var gia = $("#gia").val();
+
+            var markup = "<tr><td>" + stt + "</td><td>" + ma + "</td><td>" + tensp + "</td><td>" + gia + "</td><td><input type='button' class='btn btn' data-toggle='modal' data-target='#Suasp' value='Sửa'></td><td><input type='button' class='btn btn' value='Xóa' onclick='xoa(this)'></td></tr>";
+            $("table tbody").append(markup);
+            alert("Thêm Sản Phẩm Thành Công!!!")  
+        });
+    });  
+
+</script>
+</head>
+<body style="margin: auto;">
+	<div id="top">
+		<h1><marquee behavior="alternate" width="370" style="float: left; margin: 5px 50px 25px 130px; color: #82040B "><b>Welcome to Admin</b></marquee></h1>
+		<img src="Image\admin.png" alt="" >
+		Phạm Thủy<br><a href="Dangnhap.html">(Đăng Xuất)
+		<a href="Trangchu.html"><img src="Image\logowap3.png" alt="" width="900px" style="height: 100px"></a>
+	</div>
+	<div id="mid">
+		<ul>
+			<li><a href="qlnsanpham.html">NHÓM SẢN PHẨM</a></li>
+			<li><a href="qlsanpham.html">SẢN PHẨM</a></li>
+			<li><a href="qldonhang.html">ĐƠN HÀNG</a></li>
+			<li><a href="qlnhanvien.html">NHÂN VIÊN</a></li>
+			<li><a href="TaikhoanAd.html">TÀI KHOẢN</a></li>
+		</ul>
+	</div >
+
+	<div id="bot">
+		<h1 style="float: left; color: #1690F4; margin: 20px 300px 20px 20px;"><b>QUẢN LÝ SẢN PHẨM</b></h1>
+		<!-- <button style="width: 80px;height: 30px; background-color: green; margin-top: 20px;"><a href="Themsp.html"> Thêm</a></button>&nbsp;&nbsp; -->
+		<!-- Button trigger modal -->
+<button type="button" style="width: 80px;height: 30px; background-color: green; margin-top: 25px;"  data-toggle="modal" data-target="#Themsp">
+   Thêm
+</button>&nbsp;&nbsp;
+
+<!-- Modal -->
+<div class="modal fade" id="Themsp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><marquee behavior="left" width="300" style="float: left; color: #82040B;margin-left: 300px;"><b>THÊM SẢN PHẨM MỚI</b></marquee></h4>
+      </div>
+      <div class="modal-body">
+          <form action="">
+            <p>Số Thứ Tự:</p>
+            <p><input type="text" placeholder="" style="width: 100% ;height: 40px;" id="stt"></p>
+            <p>Mã Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="masp"></p>
+            <p>Tên Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="tensp"></p>
+            <p>Giá Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="gia"></p>
+            <button type="button" class="add-row btn btn-success" value="">Thêm</button>&nbsp;&nbsp;
+
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+      	
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="Suasp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><marquee behavior="left" width="300" style="float: left; color: #82040B;margin-left: 300px;"><b>SỬA THÔNG TIN SẢN PHẨM</b></marquee></h4>
+      </div>
+      <div class="modal-body">
+          <form action="">
+            <p>Số Thứ Tự:</p>
+            <p><input type="text" placeholder="" style="width: 100% ;height: 40px;"></p>
+            <p>Mã Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;"></p>
+            <p>Tên Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;"></p>
+            <p>Giá Sản Phẩm:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" ></p>
+          </form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Sửa</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<input type="reset" value="Làm mới" style="width: 80px;height: 30px; background-color: #F97407; margin-top: 20px;">
+		<table border="1" cellspacing="2" cellpadding="5" width="900" align="center" id="bangad">
+			<thead>
+			<tr>
+				<th>STT</th>
+				<th>Mã SẢN PHẨM</th>
+				<th>TÊN SẢN PHẨM</th>
+				<!-- <th>MÔ TẢ</th> -->
+				<th>GIÁ TIỀN</th>
+				<th colspan="2">THAO TÁC</th>
+			</tr>
+		</thead>
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td>SO1</td>
+				<td> SMART TIVI SONY 43 INCH KDL-43W660F</td>
+				<!-- <td><img src="Image/1.jpg" width="45"></td> -->
+				<td>11.500.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>SO2</td>
+				<td>SMART TIVI SONY 43 INCH KDL-43W800F</td>
+				<!-- <td><img src="Image/2.jpg" width="45"></td> -->
+				<td> 13.500.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>SA1</td>
+				<td>TIVI LED SAMSUNG UA32J4303DKXXV</td>
+				<!-- <td><img src="Image/11.jpg" width="45"></td> -->
+				<td>6.900.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>SA2</td>
+				<td>TIVI LED SAMSUNG UA40M5000AKXXV</td>
+				<!-- <td><img src="Image/12.jpg" width="45"></td> -->
+				<td>8.400.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>PA1</td>
+				<td>TIVI LED PANASONIC 40 INCH TH-40E400V</td>
+				<!-- <td><img src="Image/21.jpg" width="45"></td> -->
+				<td>7.990.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>PA2</td>
+				<td>TIVI LED 32INCH PANASONIC TH-32E400V</td>
+				<!-- <td><img src="Image/22.jpg" width="45"></td> -->
+				<td>5.190.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>TO1</td>
+				<td>TIVI LED TOSHIBA 32 INCH 32L3750VN</td>
+				<!-- <td><img src="Image/31.jpg" height="30"></td> -->
+				<td>5.290.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suasp" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+		</tbody>
+		
+		</table>
+	</div>
+	<div id="foot">
+		Copyright © by Phạm Thủy TK 14.1
+	</div>
+</body>
+</html>

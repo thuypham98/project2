@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Smart Tivi</title>
+	<link rel="stylesheet" type="text/css" href="css\admin.css">
+	<script src="js\thaotacadmin.js"></script>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var stt = $("#stt").val();
+            var ma = $("#mahd").val();
+            var tenkh = $("#tenkh").val();
+            var ngay = $("#ngaylap").val();
+            var gia = $("#gia").val();
+            var markup = "<tr><td>" + stt + "</td><td>" + ma + "</td><td>" + tenkh + "</td><td>" + ngay + "</td><td>" + gia + "</td><td><input type='button' class='btn btn' data-toggle='modal' data-target='#Suahd' value='Sửa'></td><td><input type='button' class='btn btn' value='Xóa' onclick='xoa(this)'></td></tr>";
+            $("table tbody").append(markup);
+            alert("Thêm Hóa Đơn Thành Công!!!")  
+        });
+    });  
+
+</script>
+</head>
+<body style="margin: auto;">
+	<div id="top">
+		<h1><marquee behavior="alternate" width="370" style="float: left; margin: 5px 50px 25px 130px; color: #82040B "><b>Welcome to Admin</b></marquee></h1>
+		<img src="Image\admin.png" alt="" >
+		Phạm Thủy<br><a href="Dangnhap.html">(Đăng Xuất)
+		<a href="Trangchu.html"><img src="Image\logowap3.png" alt="" width="900px" style="height: 100px"></a>
+	</div>
+	<div id="mid">
+		<ul>
+			<li><a href="qlnsanpham.html">NHÓM SẢN PHẨM</a></li>
+			<li><a href="qlsanpham.html">SẢN PHẨM</a></li>
+			<li><a href="qldonhang.html">ĐƠN HÀNG</a></li>
+			<li><a href="qlnhanvien.html">NHÂN VIÊN</a></li>
+			<li><a href="TaikhoanAd.html">TÀI KHOẢN</a></li>
+		</ul>
+	</div >
+
+	<div id="bot">
+		<h1 style="float: left; color: #1690F4; margin: 20px 300px 20px 20px;"><b>QUẢN LÝ ĐƠN HÀNG</b></h1>
+		<!-- <button style="width: 80px;height: 30px; background-color: green; margin-top: 20px;"><a href="Themsp.html"> Thêm</a></button>&nbsp;&nbsp; -->
+		<!-- Button trigger modal -->
+<button type="button" style="width: 80px;height: 30px; background-color: green; margin-top: 25px;"  data-toggle="modal" data-target="#Themdh">
+   Thêm
+</button>&nbsp;&nbsp;
+
+<!-- Modal -->
+<div class="modal fade" id="Themdh" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><marquee behavior="left" width="300" style="float: left; color: #82040B;margin-left: 300px;"><b>THÊM ĐƠN HÀNG MỚI</b></marquee></h4>
+      </div>
+      <div class="modal-body">
+          <form action="">
+            <p>Số Thứ Tự:</p>
+            <p><input type="text" placeholder="" style="width: 100% ;height: 40px;" id="stt"></p>
+            <p>Mã Hóa Đơn:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="mahd"></p>
+            <p>Tên Khách Hàng:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="tenkh"></p>
+            <p>Ngày Lập:</p>
+            <p><input type="date" placeholder="" style="width: 100%;height: 40px;" id="ngaylap"></p>
+            <p>Tổng Tiền:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;" id="gia"></p>
+            <button type="button" class="add-row btn btn-success" value="">Thêm</button>&nbsp;&nbsp;
+
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+      	
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="Suahd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><marquee behavior="left" width="300" style="float: left; color: #82040B;margin-left: 300px;"><b>SỬA THÔNG TIN HÓA ĐƠN</b></marquee></h4>
+      </div>
+      <div class="modal-body">
+          <form action="">
+            <p>Số Thứ Tự:</p>
+            <p><input type="text" placeholder="" style="width: 100% ;height: 40px;"></p>
+            <p>Mã Hóa Đơn:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;"></p>
+            <p>Tên Khách Hàng:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;"></p>
+            <p>Ngày Lập:</p>
+            <p><input type="date" placeholder="" style="width: 100%;height: 40px;"></p>
+            <p>Tổng Tiền:</p>
+            <p><input type="text" placeholder="" style="width: 100%;height: 40px;"></p>
+          </form>
+      </div>
+      <div class="modal-footer">
+      	<button type="button" class="btn btn-primary">Sửa</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		<input type="reset" value="Làm mới" style="width: 80px;height: 30px; background-color: #F97407; margin-top: 20px;">
+		<table border="1" cellspacing="2" cellpadding="5" width="900" align="center" id="bangad">
+			<thead>
+			<tr>
+				<th>STT</th>
+				<th>MÃ HÓA ĐƠN</th>
+				<th>TÊN KHÁCH HÀNG</th>
+				<th>NGÀY LẬP</th>
+				<th>TỔNG TIỀN</th>
+				<th colspan="2">THAO TÁC</th>
+			</tr>
+		</thead>
+			<tbody>
+			<tr>
+				<td>1</td>
+				<td>HD1</td>
+				<td>Cristiano</td>
+				<td>2018-04-28</td>
+				<td>12.222.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>HD2</td>
+				<td>Marcelo</td>
+				<td>2018-05-05</td>
+				<td>15.652.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			
+			<tr>
+				<td>3</td>
+				<td>HD3</td>
+				<td>Navas</td>
+				<td>2018-05-08</td>
+				<td>35.602.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>HD4</td>
+				<td>Kroos</td>
+				<td>2018-05-08</td>
+				<td>5.990.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>HD5</td>
+				<td>Modric</td>
+				<td>2018-05-12</td>
+				<td>21.500.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>HD6</td>
+				<td>Ramos</td>
+				<td>2018-05-18</td>
+				<td>14.550.000</td>
+				<td><input type="button" class="btn btn" data-toggle="modal" data-target="#Suahd" value="Sửa"></td>
+				<td><input type="button" class="btn btn" name="" value="Xóa" onclick="xoa(this)"></td>
+			</tr>
+		</tbody>
+		
+		</table>
+	</div>
+	<div id="foot">
+		Copyright © by Phạm Thủy TK 14.1
+	</div>
+</body>
+</html>
